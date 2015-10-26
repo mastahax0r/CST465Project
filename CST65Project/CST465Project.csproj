@@ -68,7 +68,10 @@
   <ItemGroup>
     <Content Include="404Error.aspx" />
     <Content Include="500Error.aspx" />
+    <Content Include="css\DefaultStyles.css" />
+    <Content Include="img\propcycleHeadTemp.jpg" />
     <Content Include="packages.config" />
+    <Content Include="App_Master\BaseTemplate.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -78,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="README.txt" />
     <Content Include="UserProfile.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -96,6 +100,13 @@
     <Compile Include="500Error.aspx.designer.cs">
       <DependentUpon>500Error.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Master\BaseTemplate.Master.cs">
+      <DependentUpon>BaseTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Master\BaseTemplate.Master.designer.cs">
+      <DependentUpon>BaseTemplate.Master</DependentUpon>
+    </Compile>
     <Compile Include="Code\UserProfile.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -112,6 +123,10 @@
     <Compile Include="UserProfile.aspx.designer.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="js\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

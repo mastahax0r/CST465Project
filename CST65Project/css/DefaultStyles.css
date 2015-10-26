@@ -1,0 +1,21 @@
+﻿/* http://paletton.com/palette.php?uid=10v0u0kllllC900rSaGePw08i%2B%2B */
+
+.color-primary-0 { color: #AA6D39 }
+.color-primary-1 { color: #000000 }
+.color-primary-2 { color: #552D0B }
+.color-primary-3 { color: #FFBF89 }
+.color-primary-4 { color: #FFDBBD }
+
+body {
+    background-color: #AA6D39;
+}
+
+header{
+    background-color: #000000;
+    color: #FFBF89;
+}
+
+footer{
+    background-color: #FFDBBD;
+    color: #552D0B;
+}

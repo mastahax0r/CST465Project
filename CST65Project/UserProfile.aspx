@@ -1,14 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" Inherits="CST65Project.UserProfile" %>
+<%@ Page Language="C#" MasterPageFile="~/App_Master/BaseTemplate.Master" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" Inherits="CST65Project.UserProfile" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Lab 3</title>
-
-  
+<asp:Content ContentPlaceHolderID="ContentPlaceHolderHead" runat="server">
+ 
     <script type="text/javascript">
-
         function validateFile(sender, args) {
             var allowedExtensions = ['jpg', 'gif', 'png'];
             var fileExtension = args.Value.split(/(\.)/g).pop();
@@ -19,15 +13,13 @@
                 }
             }
         }
-
     </script>
-     
+</asp:Content>
 
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-            <h1>Lab 4</h1>
+<asp:Content ContentPlaceHolderID="ContentPlaceHolderHeader" runat="server">
+            <h1>ASSignment 3</h1>
+    </asp:Content>
+<asp:Content ContentPlaceHolderID="ContentPlaceHolderForm1" runat="server">
             <asp:MultiView ID="multiView1" ActiveViewIndex="0" runat="server">
                 <asp:View ID="view1" runat="server">
 
@@ -97,7 +89,6 @@
                     <asp:Image ID="uxImage" runat="server" />
                 </asp:View>
             </asp:MultiView>
-        </div>
-    </form>
-</body>
-</html>
+
+    </asp:Content>
+
