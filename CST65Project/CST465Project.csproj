@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="404Error.aspx" />
     <Content Include="500Error.aspx" />
+    <Content Include="AddTreater.aspx" />
     <Content Include="css\DefaultStyles.css" />
     <Content Include="img\propcycleHeadTemp.jpg" />
     <Content Include="packages.config" />
@@ -81,8 +82,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="README.txt" />
     <Content Include="UserProfile.aspx" />
+    <Content Include="ViewTreaters.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +100,13 @@
     </Compile>
     <Compile Include="500Error.aspx.designer.cs">
       <DependentUpon>500Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddTreater.aspx.cs">
+      <DependentUpon>AddTreater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTreater.aspx.designer.cs">
+      <DependentUpon>AddTreater.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Master\BaseTemplate.Master.cs">
       <DependentUpon>BaseTemplate.Master</DependentUpon>
@@ -122,6 +130,13 @@
     </Compile>
     <Compile Include="UserProfile.aspx.designer.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTreaters.aspx.cs">
+      <DependentUpon>ViewTreaters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewTreaters.aspx.designer.cs">
+      <DependentUpon>ViewTreaters.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
