@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link type="text/css" rel="stylesheet" href="../css/DefaultStyles.css"/>
-    <title>PopCycle!</title>
+
     <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -15,6 +15,8 @@
             <img src="../img/propcycleHeadTemp.jpg" alt="propCycleTempHeadPicure"/>
             <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server">
             </asp:ContentPlaceHolder>
+
+
         </header>
         <nav>
             <asp:ContentPlaceHolder ID="ContentPlaceHolderNav" runat="server">
@@ -24,6 +26,10 @@
             <div>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolderForm1" runat="server">
                 </asp:ContentPlaceHolder>
+            </div>
+
+            <div id="LoginStatus">
+                <asp:LoginStatus BorderWidth="5" BackColor="WhiteSmoke" BorderStyle="Double" runat="server" />
             </div>
         </form>
         <footer>

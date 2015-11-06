@@ -18,6 +18,8 @@ namespace CST65Project
         {
             uxEventOutput.Text += "Page_Load Happened <br>";
             uxIsPostBack.Text = "Postback Status = " + Page.IsPostBack.ToString() + "<br>";
+
+            Trace.Write("This was written when \"Page_Load\" was ran.");
         }
 
         protected void Page_PreRender(object sender, EventArgs e)
@@ -36,5 +38,7 @@ namespace CST65Project
                                 uxCourseNumber.ID.ToString() + ": " + uxCourseNumber.Text + "<br>" +
                                 uxCourseDescription.ID.ToString() + ": " + uxCourseDescription.Text + "<br>";
         }
+
+
     }
 }

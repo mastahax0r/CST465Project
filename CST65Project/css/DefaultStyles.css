@@ -19,3 +19,15 @@ footer{
     background-color: #FFDBBD;
     color: #552D0B;
 }
+
+#LoginStatus{
+    position:absolute;
+    top: 0;
+    right: 0;
+}
+
+.rightAlign{
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+}
