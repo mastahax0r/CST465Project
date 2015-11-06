@@ -4,32 +4,34 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link type="text/css" rel="stylesheet" href="../css/DefaultStyles.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/DefaultStyles.css" />
     <title>PopCycle!</title>
     <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <main>
-        <header>
-            <img src="../img/propcycleHeadTemp.jpg" alt="propCycleTempHeadPicure"/>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server">
-            </asp:ContentPlaceHolder>
-        </header>
-        <nav>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolderNav" runat="server">
-            </asp:ContentPlaceHolder>
-        </nav>
-        <form id="form1" runat="server">
-            <div>
-                <asp:ContentPlaceHolder ID="ContentPlaceHolderForm1" runat="server">
+    <div id="pageContainer">
+        <main>
+            <header>
+                <img src="../img/propcycleHeadTemp.jpg" alt="propCycleTempHeadPicure" />
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server">
                 </asp:ContentPlaceHolder>
-            </div>
-        </form>
-        <footer>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolderFooter" runat="server">
-            </asp:ContentPlaceHolder>
-        </footer>
-    </main>
+            </header>
+            <nav>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderNav" runat="server">
+                </asp:ContentPlaceHolder>
+            </nav>
+            <form id="form1" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderForm1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+            <footer>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderFooter" runat="server">
+                </asp:ContentPlaceHolder>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>

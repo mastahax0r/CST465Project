@@ -19,3 +19,15 @@ footer{
     background-color: #FFDBBD;
     color: #552D0B;
 }
+
+.rightAlign{
+    width: 125px;
+    display: inline-block;
+    text-align: right;
+}
+
+#pageContainer{
+    width: 1004px;
+    margin-left: auto;
+    margin-right: auto;   
+}

@@ -78,7 +78,7 @@ namespace CST65Project
                 if (uxImageUpload.HasFile)
                 {
 
-                    string base64String = null;
+                    //string base64String = null;
                     byte[] buffer = new byte[uxImageUpload.PostedFile.ContentLength];
                     uxImageUpload.PostedFile.InputStream.Read(buffer, 0, uxImageUpload.PostedFile.ContentLength);
                     sessionState.Image2 = buffer;
