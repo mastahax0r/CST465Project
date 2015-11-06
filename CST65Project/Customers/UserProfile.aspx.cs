@@ -30,7 +30,7 @@ namespace CST65Project
                 uxStateResult.Text = sessionRestore.State;
                 uxZipResult.Text = sessionRestore.Zipcode;
 
-                //uxImage.ImageUrl = sessionRestore.Image;
+                uxImage.ImageUrl = sessionRestore.Image;
                 string base64String = null;
                 using (MemoryStream m = new MemoryStream(sessionRestore.Image2))
                 {
@@ -89,8 +89,14 @@ namespace CST65Project
                 multiView1.ActiveViewIndex = 1;
                 Session["ProfileData"] = sessionState;
 
-                Response.Redirect("~/UserProfile.aspx");
-
+                try
+                {
+                    Response.Redirect("~/Customers/UserProfile.aspx");
+                }
+                catch
+                {
+                    Response.Redirect("~/UserProfileAss4.aspx");
+                }
               
             }
         }

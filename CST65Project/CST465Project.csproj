@@ -69,8 +69,12 @@
     <Content Include="404Error.aspx" />
     <Content Include="500Error.aspx" />
     <Content Include="AddTreater.aspx" />
+    <Content Include="Admin\UserManagement.aspx" />
     <Content Include="Assignment4.aspx" />
     <Content Include="css\DefaultStyles.css" />
+    <Content Include="Customers\Login.aspx" />
+    <Content Include="Customers\Register.aspx" />
+    <Content Include="Customers\UserProfile.aspx" />
     <Content Include="EssayQuestion.ascx" />
     <Content Include="img\propcycleHeadTemp.jpg" />
     <Content Include="MultipleChoiceQuestion.ascx" />
@@ -85,7 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="UserProfile.aspx" />
+    <Content Include="UserProfileAss4.aspx" />
     <Content Include="ViewTreaters.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -111,6 +115,13 @@
     <Compile Include="AddTreater.aspx.designer.cs">
       <DependentUpon>AddTreater.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\UserManagement.aspx.cs">
+      <DependentUpon>UserManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserManagement.aspx.designer.cs">
+      <DependentUpon>UserManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Master\BaseTemplate.Master.cs">
       <DependentUpon>BaseTemplate.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,6 +140,27 @@
     <Compile Include="Code\ShortTextQuestion.cs" />
     <Compile Include="Code\ITestQuestion.cs" />
     <Compile Include="Code\UserProfile.cs" />
+    <Compile Include="Customers\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customers\UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,12 +183,6 @@
       <DependentUpon>MultipleChoiceQuestion.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserProfile.aspx.cs">
-      <DependentUpon>UserProfile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UserProfile.aspx.designer.cs">
-      <DependentUpon>UserProfile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ViewTreaters.aspx.cs">
       <DependentUpon>ViewTreaters.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

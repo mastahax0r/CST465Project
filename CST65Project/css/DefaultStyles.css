@@ -27,7 +27,13 @@ footer{
 }
 
 .rightAlign{
-    width: 100px;
+    width: 120px;
     display: inline-block;
     text-align: right;
+}
+
+#pageContainer{
+    width: 1004px;
+    margin-left: auto;
+    margin-right: auto;   
 }
