@@ -20,14 +20,14 @@ footer{
     color: #552D0B;
 }
 
-.rightAlign{
-    width: 125px;
-    display: inline-block;
-    text-align: right;
+#LoginStatus{
+    position:absolute;
+    top: 0;
+    right: 0;
 }
 
-#pageContainer{
-    width: 1004px;
-    margin-left: auto;
-    margin-right: auto;   
+.rightAlign{
+    width: 100px;
+    display: inline-block;
+    text-align: right;
 }
