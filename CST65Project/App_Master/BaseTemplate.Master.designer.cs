@@ -49,6 +49,33 @@ namespace CST65Project.App_Master {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// masterPageNaivagtionDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapDataSource masterPageNaivagtionDataSource;
+        
+        /// <summary>
+        /// navigationMenue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Menu navigationMenue;
+        
+        /// <summary>
+        /// masterPageNavigation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapPath masterPageNavigation;
+        
+        /// <summary>
         /// ContentPlaceHolderForm1 control.
         /// </summary>
         /// <remarks>

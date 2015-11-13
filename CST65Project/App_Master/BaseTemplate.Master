@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link type="text/css" rel="stylesheet" href="../css/DefaultStyles.css" />
-    <title>PopCycle!</title>
+
     <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -21,15 +21,26 @@
                 <asp:ContentPlaceHolder ID="ContentPlaceHolderNav" runat="server">
                 </asp:ContentPlaceHolder>
             </nav>
+
+
+
+
+
             <form id="form1" runat="server">
+                           
+            <asp:SiteMapDataSource ID="masterPageNaivagtionDataSource" StartingNodeUrl="~/Default.aspx" ShowStartingNode="false" runat="server" />
+            <asp:Menu ID="navigationMenue" CssClass="navigation" DataSourceID="masterPageNaivagtionDataSource" Orientation="Horizontal" runat="server" />
+            <asp:SiteMapPath ID="masterPageNavigation" CssClass="navigation" PathSeparator=" | " runat="server" /> 
+
+
                 <div>
                     <asp:ContentPlaceHolder ID="ContentPlaceHolderForm1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
 
-                            <div id="LoginStatus">
-                <asp:LoginStatus BorderWidth="5" BackColor="WhiteSmoke" BorderStyle="Double" runat="server" />
-            </div>
+                <div id="LoginStatus">
+                    <asp:LoginStatus BorderWidth="5" BackColor="WhiteSmoke" BorderStyle="Double" runat="server" />
+                </div>
             </form>
             <footer>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolderFooter" runat="server">
