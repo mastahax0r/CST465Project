@@ -17,8 +17,6 @@
 
         <b>True / False Questions</b>
         <br />
-        <ASS4:TrueFalseQuestion ID="uxQ4" QuestionText="Hootie the owl is always angry." runat="server" />
-        <br />
         <ASS4:TrueFalseQuestion ID="uxTFQ1" QuestionText="HTTP is a stateless protocol: " runat="server" />
         <br />
         <ASS4:TrueFalseQuestion ID="uxTFQ2" QuestionText="SessionState can be transferred between pages: " runat="server" />
@@ -31,7 +29,7 @@
         <br />
         <ASS4:TrueFalseQuestion ID="uxTFQ6" QuestionText="It is a good practice to use inline CSS styles: " runat="server" />
         <br />
-        <ASS4:TrueFalseQuestion ID="uxTFQ7" QuestionText="All controls in ASP.NET support DataBinding" runat="server" />
+        <ASS4:TrueFalseQuestion ID="uxTFQ7" QuestionText="All controls in ASP.NET support DataBinding: " runat="server" />
         <br />
         <ASS4:TrueFalseQuestion ID="uxTFQ8" QuestionText="Browsers must support ASP.NET in order to display pages created with it: " runat="server" />
         <br />
