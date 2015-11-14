@@ -40,10 +40,10 @@ namespace CST65Project
 
             //uxServerTextBox = new TextBox();
             uxRadioList.ID = "uxRadioList";
-            uxRadioList.Items.Add("Yes, birds are like that.");
-            uxRadioList.Items.FindByText("Yes, birds are like that.").Value = "true";
-            uxRadioList.Items.Add("No one is angry all the time.");
-            uxRadioList.Items.FindByText("No one is angry all the time.").Value = "false";
+            uxRadioList.Items.Add("True");
+            uxRadioList.Items.FindByText("True").Value = "true";
+            uxRadioList.Items.Add("False");
+            uxRadioList.Items.FindByText("False").Value = "false";
             Controls.Add(uxRadioList);
         }
     }

@@ -13,7 +13,7 @@
     <div id="pageContainer">
         <main>
             <header>
-                <img src="../img/propcycleHeadTemp.jpg" alt="propCycleTempHeadPicure" />
+                <img src="../img/ghostrider2600.jpg" alt="propCycleTempHeadPicure" />
                 <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server">
                 </asp:ContentPlaceHolder>
             </header>
@@ -21,17 +21,12 @@
                 <asp:ContentPlaceHolder ID="ContentPlaceHolderNav" runat="server">
                 </asp:ContentPlaceHolder>
             </nav>
-
-
-
-
-
-            <form id="form1" runat="server">
-                           
+            
+            <form id="form1" runat="server">               
             <asp:SiteMapDataSource ID="masterPageNaivagtionDataSource" StartingNodeUrl="~/Default.aspx" ShowStartingNode="false" runat="server" />
             <asp:Menu ID="navigationMenue" CssClass="navigation" DataSourceID="masterPageNaivagtionDataSource" Orientation="Horizontal" runat="server" />
             <asp:SiteMapPath ID="masterPageNavigation" CssClass="navigation" PathSeparator=" | " runat="server" /> 
-
+                <br />
 
                 <div>
                     <asp:ContentPlaceHolder ID="ContentPlaceHolderForm1" runat="server">

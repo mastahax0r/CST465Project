@@ -5,6 +5,5 @@ namespace CST65Project
     {
         string QuestionText { get; set; }
         string Answer { get; set; }
-
     }
 }
