@@ -41,7 +41,7 @@ BEGIN
 END
 ELSE IF @ProfileImage IS NULL
 BEGIN
-	UPDATE UserProfile SET FirstName=@FirstName, LastName=@LastName, Age=@Age, PhoneNumber=@PhoneNumber, EmailAddress=@EmailAddress, StreetAddress=@StreetAddress, City=@City, State=@State, ZipCode=@ZipCode, ProfileImage=@ProfileImage
+	UPDATE UserProfile SET FirstName=@FirstName, LastName=@LastName, Age=@Age, PhoneNumber=@PhoneNumber, EmailAddress=@EmailAddress, StreetAddress=@StreetAddress, City=@City, State=@State, ZipCode=@ZipCode
 	WHERE UserId=@UserID
 END
 ELSE
