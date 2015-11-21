@@ -164,6 +164,7 @@
     <Compile Include="Code\ShortTextQuestion.cs" />
     <Compile Include="Code\ITestQuestion.cs" />
     <Compile Include="Code\QuestionAnswer.cs" />
+    <Compile Include="Code\UserProfileRepo.cs" />
     <Compile Include="Code\UserProfile.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

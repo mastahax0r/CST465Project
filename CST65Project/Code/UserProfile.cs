@@ -1,4 +1,7 @@
-﻿
+﻿using System;
+//using System.Data;
+//using System.Data.SqlClient;
+
 namespace CST65Project
 {
     public class UserProfileBO
@@ -14,6 +17,7 @@ namespace CST65Project
         public string State { get; set; }
         public string Zipcode { get; set; }
         public byte[] Image2 { get; set; }
-        public string Image { get; set; }
+        //public string Image { get; set; }
+        public Guid UserID { get; set; }
     }
 }

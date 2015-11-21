@@ -229,6 +229,24 @@ namespace CST65Project {
         protected global::System.Web.UI.WebControls.FileUpload uxImageUpload;
         
         /// <summary>
+        /// UxDeletePicCBLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UxDeletePicCBLabel;
+        
+        /// <summary>
+        /// uxDeletePicCB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox uxDeletePicCB;
+        
+        /// <summary>
         /// uxSubmitButton control.
         /// </summary>
         /// <remarks>
@@ -245,6 +263,15 @@ namespace CST65Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary uxValidationSummary;
+        
+        /// <summary>
+        /// uxImageCopy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image uxImageCopy;
         
         /// <summary>
         /// view2 control.
@@ -344,5 +371,14 @@ namespace CST65Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image uxImage;
+        
+        /// <summary>
+        /// uxEditButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button uxEditButton;
     }
 }

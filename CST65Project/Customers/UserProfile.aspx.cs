@@ -1,11 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
-
+using System.Web.Security;
+//using System.Data;
+//using System.Data.SqlClient;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Web;
 
 namespace CST65Project
 {
@@ -13,91 +15,83 @@ namespace CST65Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //throw new Exception("Bad deal man, Bad DEAL!");
+            MembershipUser user = Membership.GetUser();
+            Guid userID = (Guid)user.ProviderUserKey;
 
-            if (Session["ProfileData"] != null)
-            {
-                UserProfileBO sessionRestore = (UserProfileBO)Session["ProfileData"];
-                multiView1.ActiveViewIndex = 1;
+            UserProfileBO sessionRestoreFromRepository = new UserProfileBO();
+            sessionRestoreFromRepository = UserProfileRepo.getUserProfile(userID);
 
-                uxFirstNameResult.Text = sessionRestore.FirstName;
-                uxLastNameResult.Text = sessionRestore.LastName;
-                uxAgeResult.Text = sessionRestore.Age.ToString();
-                uxPhoneNumberResult.Text = sessionRestore.PhoneNumber;
-                uxEamilResult.Text = sessionRestore.Email;
-                uxStreetResult.Text = sessionRestore.StreetAddress;
-                uxCityResult.Text = sessionRestore.City;
-                uxStateResult.Text = sessionRestore.State;
-                uxZipResult.Text = sessionRestore.Zipcode;
+            multiView1.ActiveViewIndex = 1;
 
-                uxImage.ImageUrl = sessionRestore.Image;
+            //if (sessionRestoreFromRepository.Email != null)
+            //{
+                uxFirstNameResult.Text = sessionRestoreFromRepository.FirstName;
+                uxLastNameResult.Text = sessionRestoreFromRepository.LastName;
+                uxAgeResult.Text = sessionRestoreFromRepository.Age.ToString();
+                uxPhoneNumberResult.Text = sessionRestoreFromRepository.PhoneNumber;
+                uxEamilResult.Text = sessionRestoreFromRepository.Email;
+                uxStreetResult.Text = sessionRestoreFromRepository.StreetAddress;
+                uxCityResult.Text = sessionRestoreFromRepository.City;
+                uxStateResult.Text = sessionRestoreFromRepository.State;
+                uxZipResult.Text = sessionRestoreFromRepository.Zipcode;
+
+                //uxImage.ImageUrl = sessionRestoreFromRepository.Image2;
                 string base64String = null;
-                using (MemoryStream m = new MemoryStream(sessionRestore.Image2))
+
+                if (sessionRestoreFromRepository.Image2 != null)
                 {
-                    byte[] imageBytes = m.ToArray();
-                    // Convert byte[] to Base64 String                    
-                    base64String = Convert.ToBase64String(imageBytes);
+                    using (MemoryStream m = new MemoryStream(sessionRestoreFromRepository.Image2))
+                    {
+                        byte[] imageBytes = m.ToArray();                  
+                        base64String = Convert.ToBase64String(imageBytes);
+                    }
+                    if (!string.IsNullOrEmpty(base64String))
+                    {
+                        uxImage.ImageUrl = "data:image/jpeg;base64," + base64String;
+                    }
                 }
-                if (!string.IsNullOrEmpty(base64String))
-                {
-                    uxImage.ImageUrl = "data:image/jpeg;base64," + base64String;
-                }
-            }
+            //}
         }
 
         protected void uxSubmitButton_Click(object sender, EventArgs e)
         {
-            if (!Page.IsValid)
+            if (Page.IsValid)
             {
-            }
-            else
-            {
-                //uxFirstNameResult.Text = uxFirstName.Text;
-                //uxLastNameResult.Text = uxLastName.Text;
-                //uxAgeResult.Text = uxAge.Text;
-                //uxPhoneNumberResult.Text = uxPhoneNumber.Text;
-                //uxEamilResult.Text = uxEmail.Text;
-                UserProfileBO sessionState = new UserProfileBO();
-                sessionState.FirstName = uxFirstName.Text;
-                sessionState.LastName = uxLastName.Text;
-                sessionState.Age = Int32.Parse(uxAge.Text);
-                sessionState.PhoneNumber = uxPhoneNumber.Text;
-                sessionState.Email = uxEmail.Text;
-                sessionState.EmailConfirm = uxEmailConfirm.Text;
-                sessionState.StreetAddress = uxStreetAddress.Text;
-                sessionState.City = uxCity.Text;
-                sessionState.State = uxState.Text;
-                sessionState.Zipcode = uxZipcode.Text;
+                MembershipUser user = Membership.GetUser();
+                Guid userID = (Guid)user.ProviderUserKey;
 
-                sessionState.Image = uxImage.ImageUrl;
-
-                //sessionState.Image2 = uxImage;
-
-                
+                UserProfileBO passMe = new UserProfileBO();
+                passMe.UserID = userID;
+                passMe.FirstName = uxFirstName.Text;
+                passMe.LastName = uxLastName.Text;
+                passMe.Age = Int32.Parse(uxAge.Text);
+                passMe.PhoneNumber = uxPhoneNumber.Text;
+                passMe.Email = uxEmail.Text;
+                passMe.EmailConfirm = uxEmailConfirm.Text;
+                passMe.StreetAddress = uxStreetAddress.Text;
+                passMe.City = uxCity.Text;
+                passMe.State = uxState.Text;
+                passMe.Zipcode = uxZipcode.Text;
 
                 if (uxImageUpload.HasFile)
                 {
-
-                    //string base64String = null;
                     byte[] buffer = new byte[uxImageUpload.PostedFile.ContentLength];
                     uxImageUpload.PostedFile.InputStream.Read(buffer, 0, uxImageUpload.PostedFile.ContentLength);
-                    sessionState.Image2 = buffer;
+                    passMe.Image2 = buffer;
                 }
-
-
+                else if (uxDeletePicCB.Checked)
+                {
+                    //This results in a "broken image" box. Don't have to to figure out better. Due at midnight. 
+                    passMe.Image2 = new byte[1];
+                }
+                else
+                {
+                    passMe.Image2 = null;
+                }
 
                 multiView1.ActiveViewIndex = 1;
-                Session["ProfileData"] = sessionState;
-
-                try
-                {
-                    Response.Redirect("~/Customers/UserProfile.aspx");
-                }
-                catch
-                {
-                    Response.Redirect("~/UserProfileAss4.aspx");
-                }
-              
+                UserProfileRepo.saveUserProfile(passMe);
+                Response.Redirect("~/Customers/UserProfile.aspx");
             }
         }
 
@@ -111,7 +105,22 @@ namespace CST65Project
             {
                 args.IsValid = false;
             }
+        }
 
+        protected void uxEditButton_Click(object sender, EventArgs e)
+        {
+            multiView1.ActiveViewIndex = 0;
+            uxFirstName.Text = uxFirstNameResult.Text;
+            uxLastName.Text = uxLastNameResult.Text;
+            uxAge.Text = uxAgeResult.Text;
+            uxPhoneNumber.Text = uxPhoneNumberResult.Text;
+            uxEmail.Text = uxEamilResult.Text;
+            uxEmailConfirm.Text = uxEamilResult.Text;
+            uxStreetAddress.Text = uxStreetResult.Text;
+            uxCity.Text = uxCityResult.Text;
+            uxState.Text = uxStateResult.Text;
+            uxZipcode.Text = uxZipResult.Text;
+            uxImageCopy.ImageUrl = uxImage.ImageUrl;
         }
     }
 }
