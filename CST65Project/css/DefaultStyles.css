@@ -8,6 +8,7 @@
 
 body {
     background-color: #AA6D39;
+
 }
 
 header{
@@ -35,7 +36,10 @@ footer{
 #pageContainer{
     width: 1004px;
     margin-left: auto;
-    margin-right: auto;   
+    margin-right: auto;  
+        width: 100%;
+    max-width: 1024px;
+    min-width: 320px; 
 }
 
 .navigation a:link{
@@ -47,4 +51,31 @@ footer{
 
 .navigation{
     color: #000000;
+}
+
+.col{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.contact{
+    background-color: #FFBF89;
+    color: #000000;
+}
+
+@media screen and (min-width: 768px){
+    .col_25{
+        background-color: red;
+        width: 25%;
+        float:right;
+        
+    }
+    .col_75{
+        background-color: blue;
+        float:left;
+        width: 75%;
+
+    }
+
 }
