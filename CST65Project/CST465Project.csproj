@@ -70,6 +70,7 @@
     <Content Include="500Error.aspx" />
     <Content Include="About.aspx" />
     <Content Include="AddTreater.aspx" />
+    <Content Include="Admin\ManageProducts.aspx" />
     <Content Include="Admin\UserManagement.aspx" />
     <Content Include="Answers.html" />
     <Content Include="Assignment4.aspx" />
@@ -80,8 +81,10 @@
     <Content Include="Customers\Register.aspx" />
     <Content Include="Customers\UserProfile.aspx" />
     <Content Include="EssayQuestion.ascx" />
+    <Content Include="FeaturedProducts.ascx" />
     <Content Include="img\ghostrider2600.jpg" />
     <Content Include="img\propcycleHeadTemp.jpg" />
+    <Content Include="img\thumbs.jpg" />
     <Content Include="MidtermExam.aspx" />
     <Content Include="MultipleChoiceQuestion.ascx" />
     <Content Include="packages.config" />
@@ -131,6 +134,13 @@
     </Compile>
     <Compile Include="AddTreater.aspx.designer.cs">
       <DependentUpon>AddTreater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageProducts.aspx.cs">
+      <DependentUpon>ManageProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageProducts.aspx.designer.cs">
+      <DependentUpon>ManageProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\UserManagement.aspx.cs">
       <DependentUpon>UserManagement.aspx</DependentUpon>
@@ -207,6 +217,13 @@
     </Compile>
     <Compile Include="EssayQuestion.ascx.designer.cs">
       <DependentUpon>EssayQuestion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FeaturedProducts.ascx.cs">
+      <DependentUpon>FeaturedProducts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeaturedProducts.ascx.designer.cs">
+      <DependentUpon>FeaturedProducts.ascx</DependentUpon>
     </Compile>
     <Compile Include="MidtermExam.aspx.cs">
       <DependentUpon>MidtermExam.aspx</DependentUpon>

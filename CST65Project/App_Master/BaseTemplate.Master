@@ -1,50 +1,46 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BaseTemplate.master.cs" Inherits="CST65Project.App_Master.BaseTemplate" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     <link type="text/css" rel="stylesheet" href="../css/DefaultStyles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">
-    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server" />
 </head>
+
 <body>
     <div id="pageContainer">
-        <main>
-            <header>
-                <img src="../img/ghostrider2600.jpg" alt="propCycleTempHeadPicure" />
-                <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server">
-                </asp:ContentPlaceHolder>
-            </header>
-            <nav>
-                <asp:ContentPlaceHolder ID="ContentPlaceHolderNav" runat="server">
-                </asp:ContentPlaceHolder>
-            </nav>
+        <form id="form1" runat="server">
+            <main>
 
-            <form id="form1" runat="server">
-                <asp:SiteMapDataSource ID="masterPageNaivagtionDataSource" StartingNodeUrl="~/Default.aspx" ShowStartingNode="false" runat="server" />
-                <asp:Menu ID="navigationMenue" CssClass="navigation" DataSourceID="masterPageNaivagtionDataSource" Orientation="Horizontal" runat="server" />
-                <asp:SiteMapPath ID="masterPageNavigation" CssClass="navigation" PathSeparator=" | " runat="server" />
-                <br />
+                <header>
+                    <img id="popCycleLogoHead" src="../img/ghostrider2600.jpg" alt="popCycleLogo" />
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server" />
+                    <asp:SiteMapDataSource ID="masterPageNaivagtionDataSource" StartingNodeUrl="~/Default.aspx" ShowStartingNode="false" runat="server" />
+                    <asp:Menu ID="navigationMenue" CssClass="navigation" DataSourceID="masterPageNaivagtionDataSource" Orientation="Horizontal" runat="server" />
+                </header>
+
+                <nav>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderNav" runat="server" />
+                    <asp:SiteMapPath ID="masterPageNavigation" CssClass="navigation" PathSeparator=" | " runat="server" />
+                </nav>
 
                 <div>
-                    <asp:ScriptManager ID="masterScriptManager" runat="server">
-                    </asp:ScriptManager>
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolderForm1" runat="server">
-                    </asp:ContentPlaceHolder>
+                    <asp:ScriptManager ID="masterScriptManager" runat="server" />
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderForm1" runat="server" />
                 </div>
 
                 <div id="LoginStatus">
                     <asp:LoginStatus BorderWidth="5" BackColor="WhiteSmoke" BorderStyle="Double" runat="server" />
                 </div>
-            </form>
-            <footer>
-                <asp:ContentPlaceHolder ID="ContentPlaceHolderFooter" runat="server">
-                </asp:ContentPlaceHolder>
-            </footer>
-        </main>
+
+                <footer>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderFooter" runat="server" />
+                </footer>
+
+            </main>
+        </form>
     </div>
 </body>
 </html>

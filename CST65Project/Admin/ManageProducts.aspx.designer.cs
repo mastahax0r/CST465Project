@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CST65Project.App_Master {
+namespace CST65Project.Admin {
     
     
-    public partial class BaseTemplate {
+    public partial class ManageProducts {
         
         /// <summary>
-        /// ContentPlaceHolderHead control.
+        /// productManagement control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolderHead;
+        protected global::System.Web.UI.WebControls.SqlDataSource productManagement;
         
         /// <summary>
         /// form1 control.
@@ -31,75 +31,48 @@ namespace CST65Project.App_Master {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ContentPlaceHolderHeader control.
+        /// toggleForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolderHeader;
+        protected global::System.Web.UI.WebControls.LinkButton toggleForm;
         
         /// <summary>
-        /// masterPageNaivagtionDataSource control.
+        /// displayMode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource masterPageNaivagtionDataSource;
+        protected global::System.Web.UI.WebControls.Literal displayMode;
         
         /// <summary>
-        /// navigationMenue control.
+        /// insertProductForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu navigationMenue;
+        protected global::System.Web.UI.WebControls.FormView insertProductForm;
         
         /// <summary>
-        /// ContentPlaceHolderNav control.
+        /// updateProductForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolderNav;
+        protected global::System.Web.UI.WebControls.FormView updateProductForm;
         
         /// <summary>
-        /// masterPageNavigation control.
+        /// productGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapPath masterPageNavigation;
-        
-        /// <summary>
-        /// masterScriptManager control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager masterScriptManager;
-        
-        /// <summary>
-        /// ContentPlaceHolderForm1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolderForm1;
-        
-        /// <summary>
-        /// ContentPlaceHolderFooter control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolderFooter;
+        protected global::System.Web.UI.WebControls.GridView productGridView;
     }
 }

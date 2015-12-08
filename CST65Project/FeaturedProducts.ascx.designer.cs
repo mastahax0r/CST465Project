@@ -10,24 +10,24 @@
 namespace CST65Project {
     
     
-    public partial class Products {
+    public partial class FeaturedProducts {
         
         /// <summary>
-        /// productListDS control.
+        /// featuredProductsDS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource productListDS;
+        protected global::System.Web.UI.WebControls.SqlDataSource featuredProductsDS;
         
         /// <summary>
-        /// productsListRepeater control.
+        /// featuredProductsRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater productsListRepeater;
+        protected global::System.Web.UI.WebControls.Repeater featuredProductsRepeater;
     }
 }

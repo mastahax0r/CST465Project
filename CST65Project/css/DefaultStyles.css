@@ -1,81 +1,143 @@
 ﻿/* http://paletton.com/palette.php?uid=10v0u0kllllC900rSaGePw08i%2B%2B */
 
-.color-primary-0 { color: #AA6D39 }
-.color-primary-1 { color: #000000 }
-.color-primary-2 { color: #552D0B }
-.color-primary-3 { color: #FFBF89 }
-.color-primary-4 { color: #FFDBBD }
+/* main background brown */
+.color-primary-0 {
+    color: #AA6D39;
+}
+
+/* black */
+.color-primary-1 {
+    color: #000000;
+}
+
+/* darker brown*/
+.color-primary-2 {
+    color: #552D0B;
+}
+
+/* light tan */
+.color-primary-3 {
+    color: #FFBF89;
+}
+
+/* lighter tan */
+.color-primary-4 {
+    color: #FFDBBD;
+}
 
 body {
     background-color: #AA6D39;
-
+    min-width: 320px;
 }
 
-header{
+header {
     background-color: #000000;
     color: #FFBF89;
 }
 
-footer{
+footer {
     background-color: #FFDBBD;
     color: #552D0B;
 }
 
-#LoginStatus{
-    position:absolute;
-    top: 0;
-    right: 0;
+.product {
+    display: block;
+    background-color: #ffdbbd;
+    color: #552d0b;
+    width: 100%;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.rightAlign{
+.price {
+    color: #000000;
+    font-weight: 800;
+}
+
+.rightAlign {
     width: 120px;
     display: inline-block;
     text-align: right;
 }
 
-#pageContainer{
-    width: 1004px;
-    margin-left: auto;
-    margin-right: auto;  
-        width: 100%;
-    max-width: 1024px;
-    min-width: 320px; 
+.navigation a:link {
+    color: #FFBF89;
 }
 
-.navigation a:link{
-    color: #FFBF89
-}
-.navigation a:visited{
-    color: #552D0B
+.navigation a:visited {
+    color: #552D0B;
 }
 
-.navigation{
+.navigation {
     color: #000000;
 }
 
-.col{
+.col {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
 }
 
-.contact{
+.contact {
     background-color: #FFBF89;
     color: #000000;
 }
 
-@media screen and (min-width: 768px){
-    .col_25{
-        background-color: red;
+#LoginStatus {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#popCycleLogoHead {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    width: 90%;
+}
+
+#pageContainer {
+    width: 1004px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1024px;
+    min-width: 320px;
+}
+
+@media screen and (min-width: 768px) {
+    .col_25 {
+        background-color: #ffdbbd;
         width: 25%;
-        float:right;
-        
+        float: right;
     }
-    .col_75{
-        background-color: blue;
-        float:left;
+
+    .col_75 {
+        background-color: #ffbf89;
+        float: left;
         width: 75%;
-
     }
 
+    .col_50 {
+        float: left;
+        width: 47.5%;
+        background-color: #FFBF89;
+    }
+
+    .picOfWeek {
+        background-color: #000000;
+        width: 47.5%;
+        border: double;
+        border-color: #FFBF89;
+        overflow: hidden;
+        float: right;
+        color: #AA6D39;
+    }
+
+        .picOfWeek img {
+            height: auto;
+            width: 100%;
+        }
 }
